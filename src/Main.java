@@ -2,7 +2,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
-    //Prueba pull despues de cambiar la rama default
     public static void main(String[] args) throws IOException {
         MonedasValidas monedasValidas= new MonedasValidas();
         try {
