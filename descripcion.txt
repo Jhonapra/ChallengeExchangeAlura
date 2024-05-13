@@ -1,0 +1,7 @@
+
+Se realizo una transaccion el dia 2024-05-13 a la hora 12:39, el tipo de cambio fue
+COP a USD, se convirtio la cantidad de 3000000 COP a 771 USD.
+--------------------------------------------------------------------------
+Se realizo una transaccion el dia 2024-05-13 a la hora 12:40, el tipo de cambio fue
+USD a COP, se convirtio la cantidad de 1000 USD a 3890145 COP.
+--------------------------------------------------------------------------

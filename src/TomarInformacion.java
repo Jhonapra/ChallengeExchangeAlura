@@ -8,10 +8,32 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class TomarInformacion {
+    private String moneda;
+    private String tipoDeMonedaDeCambio;
+    private int cantidadConvertida;
+    private int cantidadAconvertir;
+
+    public int getCantidadAconvertir() {
+        return cantidadAconvertir;
+    }
+
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public String getTipoDeMonedaDeCambio() {
+        return tipoDeMonedaDeCambio;
+    }
+
+    public int getCantidadConvertida() {
+        return cantidadConvertida;
+    }
+
     public void tomaDeLaInformacion(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cual es tu tipo de moneda?");
         String miMoneda = scanner.next();
+        moneda = miMoneda;
         URI direccion = URI.create("https://v6.exchangerate-api.com/v6/934f83935e81e35e8d3cbe45/latest/" +miMoneda);
 
         HttpClient client = HttpClient.newHttpClient();
@@ -29,13 +51,16 @@ public class TomarInformacion {
 
             System.out.println("Escribe el tipo de moneda al que deseas convertir la tuya");
             String monedaDeCambio = scanner.next();
+            tipoDeMonedaDeCambio = monedaDeCambio;
             System.out.println("Escribe la cantidad de dinero que tienes para convertir");
             double cantidadDeDinero = scanner.nextDouble();
+            cantidadAconvertir = (int)cantidadDeDinero;
             double cantidadDeCambio = (double) ObtenerConversion.get(monedaDeCambio);
             double conversor = cantidadDeCambio*cantidadDeDinero;
             int valorEntero = (int)conversor;
+            cantidadConvertida = valorEntero;
             System.out.println("La cantidad convertida es: "+valorEntero+" "+monedaDeCambio);
-            System.out.println("Espero que el programa haya funcionado satisfactoriamente, regrese cuando lo desee");
+            System.out.println("Gracias por utilizar el programa, feliz dia.");
 
 
 

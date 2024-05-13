@@ -1,6 +1,5 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.internal.bind.util.ISO8601Utils;
 
 import java.io.IOException;
 import java.net.URI;
@@ -8,7 +7,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class MonedasValidas {
@@ -37,7 +35,7 @@ public class MonedasValidas {
                 Desea saber cuales son todos los tipos de cambio diponibles?,
                 si la respuesta es si escriba el numero 1, de lo contrario digite 0.
                 ====================================================================
-                :
+                
                 """);
         Gson gson = new Gson();
         ArrayCodes arrayCodes= gson.fromJson(json, ArrayCodes.class);
@@ -50,10 +48,5 @@ public class MonedasValidas {
         }else {
             System.out.println("Recuerde escribir todo en mayuscula, suerte");
         }
-
     }
-
-
-
-
 }
