@@ -1,5 +1,7 @@
 import com.google.gson.Gson;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -29,7 +31,7 @@ public class TomarInformacion {
         return cantidadConvertida;
     }
 
-    public void tomaDeLaInformacion(){
+    public void tomaDeLaInformacion() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cual es tu tipo de moneda?");
         String miMoneda = scanner.next();
@@ -65,7 +67,11 @@ public class TomarInformacion {
 
 
         } catch (Exception e) {
-            throw new RuntimeException("Surgio un error.");
+            System.out.println("Surgio un error, recuerda leer bien y seguir las instrucciones, reinicia el programa e intentalo de nuevo.");
+            FileWriter fileWriter = new FileWriter("descripcion.txt", true);
+            fileWriter.write("**Transaccion no valida**...");
+            fileWriter.close();
+
         }
 
     }

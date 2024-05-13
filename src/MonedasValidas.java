@@ -26,27 +26,33 @@ public class MonedasValidas {
                 ====================================================================
                 Bienvenido al challenge de conversion de monedas.
                 
-                Las monedas mas usadas para convertir son:
-                -USD a COP.
-                -COP a USD.
-                -COP a EUR.
+                Las monedas mas usadas para convertir(En esta ocasion) son:
+                -USD, Dolar Estadounidense.
+                -COP, Peso Colombiano.
+                -CLP, Peso Chileno.
+                -USD a COP | COP a USD | COP a EUR
                 Recuerde siempre escribir las monedas en mayusculas.
                 --------------------------------------------------------------------
                 Desea saber cuales son todos los tipos de cambio diponibles?,
-                si la respuesta es si escriba el numero 1, de lo contrario digite 0.
+                si la respuesta es si escriba el numero 1, de lo contrario digite cualquier otro numero.
                 ====================================================================
-                
                 """);
         Gson gson = new Gson();
         ArrayCodes arrayCodes= gson.fromJson(json, ArrayCodes.class);
         ArrayList mirarArray = arrayCodes.getSupported_codes();
         Gson gsonConversor = new GsonBuilder().setPrettyPrinting().create();
         String jsonBonito = gsonConversor.toJson(mirarArray);
-        int respuesta = scanner.nextInt();
-        if (respuesta==1){
-            System.out.println(jsonBonito);
-        }else {
-            System.out.println("Recuerde escribir todo en mayuscula, suerte");
+
+        try {
+            int respuesta = scanner.nextInt();
+            if (respuesta==1){
+                System.out.println(jsonBonito);
+            }else {
+                System.out.println("Disfruta de la experiencia de conversion.");
+            }
+        }catch (Exception e){
+            System.out.println("El valor ingresado no fue un numero, pero buen intento, pon mas cuidado a las instrucciones.");
         }
+
     }
 }

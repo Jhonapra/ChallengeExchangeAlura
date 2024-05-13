@@ -5,3 +5,18 @@ COP a USD, se convirtio la cantidad de 3000000 COP a 771 USD.
 Se realizo una transaccion el dia 2024-05-13 a la hora 12:40, el tipo de cambio fue
 USD a COP, se convirtio la cantidad de 1000 USD a 3890145 COP.
 --------------------------------------------------------------------------
+Se realizo una transaccion el dia 2024-05-13 a la hora 14:19, el tipo de cambio fue
+COP a USD, se convirtio la cantidad de 50 COP a 0 USD.
+----------------------------------------------------------------------------------------------------
+Se realizo una transaccion el dia 2024-05-13 a la hora 14:33, el tipo de cambio fue
+pedro a pedri, se convirtio la cantidad de 2000 pedro a 0 pedri.
+----------------------------------------------------------------------------------------------------
+Se realizo una transaccion el dia 2024-05-13 a la hora 14:36, el tipo de cambio fue
+COP a CLP, se convirtio la cantidad de 200000 COP a 47740 CLP.
+----------------------------------------------------------------------------------------------------
+**Transaccion no valida**Se realizo una transaccion el dia 2024-05-13 a la hora 14:41, el tipo de cambio fue
+Holas12 a null, se convirtio la cantidad de 0 Holas12 a 0 null.
+----------------------------------------------------------------------------------------------------
+**Transaccion no valida**Se realizo una transaccion el dia 2024-05-13 a la hora 14:42, el tipo de cambio fue
+Pedro a Puchaina, se convirtio la cantidad de 200 Pedro a 0 Puchaina.
+----------------------------------------------------------------------------------------------------
